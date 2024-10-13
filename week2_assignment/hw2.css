@@ -1,0 +1,121 @@
+@import "reset.css";
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color:rgb(255, 255, 255);
+}
+
+.header{
+    border: 10px solid black;
+    font-family: arial;
+    font-size: 24px;
+    top: 0;
+    height: 100px;
+    background-color: rgba(221, 221, 221, 0.8);
+  }
+
+h1{
+    display: flex;
+    justify-content: center;
+    line-height: 100px;
+}
+.container{
+    border: 10px solid black;
+    height: 400px;
+    width: 700px;
+    background-color: rgba(231, 231, 231, 0.833);
+    justify-content: center;
+    margin: auto;
+}
+
+.listbox{
+    border: 10px solid black;
+    display: flex;
+    width: 700px;
+    height: 600px;
+    background-color: gainsboro;
+    margin: auto;
+}
+.ControlButton{
+    position: relative;
+    left: 970px;
+    height: fit-content;
+    width: fit-content;
+    border: 10px solid black;
+   
+}
+.ControlButton>button{
+    margin: 5px;
+}
+
+
+.form-group{
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+
+
+.form-group>input{
+    width: 70%;
+    margin-top: 15px;
+    height: 30px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.form-group2 {
+    align-items: baseline;
+    display: flex;
+    justify-content: flex-end; /* Space out the elements evenly */
+}
+
+.form-group2>input{
+    width: 20%;
+    height: 30px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group2>select{
+    width: 20%;
+    height: 47.25px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+    
+
+.buttons button {
+    position: relative;
+    bottom: 0;
+    width: 48%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reset-btn {
+    background-color: #e0e0e0;
+}
+
+.search-btn {
+    background-color: #3f51b5;
+    color: white;
+}
+
+
+
+
