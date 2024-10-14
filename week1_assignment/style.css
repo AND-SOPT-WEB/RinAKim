@@ -1,0 +1,182 @@
+body{
+    background-color: black;
+    height:100%;
+    margin:0;
+}
+.loop{
+    display: flex; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    max-height: 170px;
+    background: black;
+    gap:10px;
+
+    
+}
+.loop img{
+    border-radius: 10px;
+    max-height: 170px;
+    background-color: transparent;
+}
+
+.img-list{
+    display: flex;
+    gap:10px;
+}
+
+.img-list img:hover{
+    transform: scale(1.1);
+}
+
+ul{
+    animation: infinite_slide 50s linear  infinite ;
+}
+
+ul .l2 {
+    animation: infinite_slide2 50s linear infinite ;
+}
+
+
+@keyframes infinite_slide{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+
+@keyframes infinite_slide2{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.wrapper{
+    max-height: 200;
+    width: 200;
+    border: 1px solid transparent;
+    display: flex;
+    overflow-x: auto;
+}
+
+.wrapper::-webkit-scrollbar{
+    width: 0;
+}
+
+.wrapper.img{
+    object-fit: contain;
+    flex-flow: row wrap;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    min-width: 110px;
+    height: 110px;
+    line-height: 110px;
+    text-align: center;
+    background-color: #ddd;
+    margin-right: 2px;
+
+}
+
+.icon{
+    align-content: space-between;
+    z-index: 1;
+    position: fixed;
+    background-color: transparent;
+    margin-top: 10px;
+    right: 10px;
+    padding: 10px;
+}
+
+.bottom{
+    bottom: 0;
+    font-size: 15pt;
+    font-family: sans-serif;
+    background-color: black;
+    padding: 10px;
+}
+
+.bottom2{
+    font-size: 15pt;
+    font-family: sans-serif;
+    padding: 10px;
+}
+
+#header button{
+    background-color: transparent;
+    border: transparent;
+    color: white;
+}
+
+#header{
+    position: fixed;
+    z-index: 1;
+    background-color: transparent; 
+    padding: 10px; 
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+#sopt{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.top {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.box1 {
+    width: 100%; 
+    height: 100%;
+}
+
+.box2 {
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    text-align: right;
+}
+
+.box2 button {
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12pt;
+    background-color: white;
+    border: transparent;
+    margin: 10px;
+}
+
+.hover_shortcut:hover{
+    transform: scale(0.9);
+}
+
+a {
+    background-color: transparent;
+
+}
+section{
+    display: flex;
+    padding: 16px;
+}
+
+ul{
+    margin: 0px;
+    padding-left: 0px;
+}
+
