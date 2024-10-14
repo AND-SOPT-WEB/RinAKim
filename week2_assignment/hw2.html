@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+
+
+<head>
+    <link rel="stylesheet" href="hw2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>회원 관리 페이지</h1>
+        <img src="">
+    </div>
+    <br><br>
+
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="name">이름</label>
+                <input type="text" id="name" placeholder="이름을 입력하세요" required>
+            </div>
+
+            <div class="form-group">
+                <label for="englishName">영문이름</label>
+                <input type="text" id="englishName" placeholder="영문이름을 입력하세요" required>
+            </div>
+
+            <div class="form-group2">
+                <label for="github">GitHub</label>
+                <input type="text" id="github" placeholder="GitHub ID를 입력하세요" required>
+
+
+                <label for="gender">성별</label>
+                <select id="gender">
+                    <option value="male">남성</option>
+                    <option value="female">여성</option>
+                </select>
+
+                <label for="role">역할</label>
+                <select id="role">
+                    <option value="ob">OB</option>
+                    <option value="yb">YB</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="firstGrade">1주차 금잔디조</label>
+                <input type="number" id="firstGrade" min="1" max="9" placeholder="1주차 금잔디조를 입력하세요 (1-9)">
+            </div>
+
+            <div class="form-group">
+                <label for="secondGrade">2주차 금잔디조</label>
+                <input type="number" id="secondGrade" min="1" max="9" placeholder="2주차 금잔디조를 입력하세요 (1-9)">
+            </div>
+
+            <div class="buttons">
+                <button type="button" class="reset-btn">초기화</button>
+                <button type="submit" class="search-btn">검색</button>
+            </div>
+        </form>
+    </div>
+
+
+    <br><br>
+
+    <div class="ControlButton">
+        <button type="submit">선택삭제</button>
+        <button type="submit">추가</button>
+    </div>
+
+    <div class="listbox">
+        <table>
+            <tr>
+                <th scope="col">
+                    <input type="checkbox" />
+                    <!-- <label></label> -->
+                    </td>
+                <th scope="col">이름</td>
+                <th scope="col">영어이름</td>
+                <th scope="col">GitHub</td>
+                <th scope="col">성별</td>
+                <th scope="col">역할</td>
+                <th scope="col">1주차 금잔디조</td>
+                <th scope="col">2주차 금잔디조</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td>김우직</td>
+                <td>남</td>
+                <td>GitHub</td>
+                <td>성별</td>
+                <td>역할</td>
+                <td>1주차 금잔디조</td>
+                <td>2주차 금잔디조</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td>박수진</td>
+                <td>여</td>
+                <td>GitHub</td>
+                <td>성별</td>
+                <td>역할</td>
+                <td>1주차 금잔디조</td>
+                <td>2주차 금잔디조</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td>김우직</td>
+                <td>남</td>
+                <td>GitHub</td>
+                <td>성별</td>
+                <td>역할</td>
+                <td>1주차 금잔디조</td>
+                <td>2주차 금잔디조</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td>김우직</td>
+                <td>남</td>
+                <td>GitHub</td>
+                <td>성별</td>
+                <td>역할</td>
+                <td>1주차 금잔디조</td>
+                <td>2주차 금잔디조</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td>김우직</td>
+                <td>남</td>
+                <td>GitHub</td>
+                <td>성별</td>
+                <td>역할</td>
+                <td>1주차 금잔디조</td>
+                <td>2주차 금잔디조</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td>김우직</td>
+                <td>남</td>
+                <td>GitHub</td>
+                <td>성별</td>
+                <td>역할</td>
+                <td>1주차 금잔디조</td>
+                <td>2주차 금잔디조</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td>김우직</td>
+                <td>남</td>
+                <td>GitHub</td>
+                <td>성별</td>
+                <td>역할</td>
+                <td>1주차 금잔디조</td>
+                <td>2주차 금잔디조</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td>김우직</td>
+                <td>남</td>
+                <td>GitHub</td>
+                <td>성별</td>
+                <td>역할</td>
+                <td>1주차 금잔디조</td>
+                <td>2주차 금잔디조</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td>김우직</td>
+                <td>남</td>
+                <td>GitHub</td>
+                <td>성별</td>
+                <td>역할</td>
+                <td>1주차 금잔디조</td>
+                <td>2주차 금잔디조</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td>김우직</td>
+                <td>남</td>
+                <td>GitHub</td>
+                <td>성별</td>
+                <td>역할</td>
+                <td>1주차 금잔디조</td>
+                <td>2주차 금잔디조</td>
+            </tr>
+
+        </table>
+
+
+
+
+
+
+
+    </div>
+    <br><br>
+
+
+
+</body>
+
+</html>

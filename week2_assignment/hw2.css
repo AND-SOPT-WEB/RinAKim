@@ -1,0 +1,183 @@
+@import "reset.css";
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(210, 210, 210);
+}
+
+.header {
+    border: 10px solid black;
+    font-family: arial;
+    font-size: 24px;
+    top: 0;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    line-height: 80px;
+}
+
+.container {
+    border: 10px solid black;
+    height: 500px;
+    width: 800px;
+    background-color: rgba(255, 255, 255, 0.833);
+    justify-content: center;
+    margin: auto;
+}
+
+
+.ControlButton {
+    position: relative;
+    left: 800px;
+    height: fit-content;
+    width: fit-content;
+    border: 10px solid black;
+
+}
+
+.ControlButton>button {
+    margin: 5px;
+}
+
+
+label {
+    width: 100px;
+    background-color: #ccc;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+
+.form-group>input {
+    width: 680px;
+    margin-top: 15px;
+    height: 30px;
+    border: 1px solid #ccc;
+    /* border-radius: 5px; */
+
+}
+
+.form-group2 {
+    align-items: baseline;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.form-group2>input {
+    width: 160px;
+    height: 30px;
+    border: 1px solid #ccc;
+    /* border-radius: 5px; */
+}
+
+.form-group2>select {
+    width: 160px;
+    height: 30px;
+    border: 1px solid #ccc;
+    /* border-radius: 5px; */
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+
+.buttons button {
+    position: relative;
+    bottom: 0;
+    width: 48%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reset-btn {
+    background-color: #e0e0e0;
+}
+
+.search-btn {
+    background-color: #3f51b5;
+    color: white;
+}
+
+.listbox {
+    border: 10px solid black;
+    display: flex;
+    width: fit-content;
+    background-color: gainsboro;
+    margin: auto;
+}
+
+table {
+    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 1px 3px;
+}
+
+th:nth-child(1) {
+    width: 40px;
+}
+
+th:nth-child(2) {
+    width: 80px;
+}
+
+th:nth-child(3) {
+    width: 150px;
+}
+
+th:nth-child(4) {
+    width: 150px;
+}
+
+th:nth-child(5) {
+    width: 50px;
+}
+
+th:nth-child(6) {
+    width: 50px;
+}
+
+th:nth-child(7) {
+    width: 200px;
+}
+
+th:nth-child(8) {
+    width: 200px;
+}
+
+th,
+td {
+    text-align: center;
+    border: 1px solid #000;
+    vertical-align: top;
+    vertical-align: bottom;
+    vertical-align: middle;
+}
+
+th {
+    height: 50px;
+    background-color: #3f51b5;
+    border-radius: 4px;
+}
+
+td {
+    height: 70px;
+    background-color: white;
+    border-radius: 2px;
+}
