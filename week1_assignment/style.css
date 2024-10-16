@@ -70,7 +70,7 @@ ul{
 
 }
 
-.icon{
+.header_right{
     align-content: space-between;
     z-index: 1;
     position: fixed;
@@ -88,6 +88,10 @@ ul{
     padding: 10px;
 }
 
+.bottom p{
+    color: white;
+}
+
 .bottom2{
     font-size: 1.2em;
     font-family: sans-serif;
@@ -96,13 +100,13 @@ ul{
 
 
 
-#header button{
+.header_left button{
     background-color: transparent;
     border: transparent;
     color: white;
 }
 
-#header{
+.header_left{
     color: white;
     position: fixed;
     z-index: 1;
@@ -142,7 +146,6 @@ ul{
 }
 
 .box2 span {
-    /* height: 20px; */
     align-content: center;
     border-radius: 5px;
     font-family: Arial, Helvetica, sans-serif;
