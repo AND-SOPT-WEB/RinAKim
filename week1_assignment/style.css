@@ -5,13 +5,12 @@ body{
 }
 
 .loop{
+    width: 100%;
     display: flex; 
     overflow: hidden; 
     white-space: nowrap; 
     max-height: 200px;
     background: black;
-    gap:10px;
-    
 }
 
 .loop img{
@@ -23,15 +22,18 @@ body{
 
 .img-list{
     display: flex;
-    gap:10px;
 }
 
 .img-list img:hover{
     transform: scale(1.1);
 }
 
-ul {
-    animation: infinite_slide 50s linear infinite;
+.img-list{
+    animation: infinite_slide 19s linear infinite;
+}
+
+.l2{
+    animation-delay: 19s;
 }
 
 @keyframes infinite_slide {
@@ -39,7 +41,7 @@ ul {
         transform: translateX(0%);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 
@@ -80,6 +82,7 @@ ul {
 }
 
 .bottom{
+    width: 100%;
     bottom: 0;
     font-size: 1.2em;
     font-family: sans-serif;
@@ -99,7 +102,6 @@ ul {
 }
 
 
-
 .header_left button{
     background-color: transparent;
     border: transparent;
@@ -117,8 +119,7 @@ ul {
     text-align: left;
 }
 
-#sopt{
-    font-size: larger;
+header #sopt{
     font-weight: bold;
 }
 
