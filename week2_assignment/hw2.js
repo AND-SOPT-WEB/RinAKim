@@ -373,7 +373,7 @@ function showFilteredTable(event) {
   document.querySelector("tbody").innerHTML = outputHTML;
 }
 
-function resetTable(event) {
+function reset(event) {
   // 폼 제출 방지
   event.preventDefault();
 
@@ -422,6 +422,11 @@ function addNewMember(event) {
   const role = document.getElementById("newRole").value;
   const firstGroup = document.getElementById("newFirstGroup").value;
   const secondGroup = document.getElementById("newSecondGroup").value;
+
+  if (!name || !englishName || !github || !gender || !role || !firstGroup || !secondGroup) {
+    alert("모든 필드를 채워주세요.");
+    return; // Stop the function if any field is empty
+  }
 
   // 새 멤버 객체 생성
   const newMember = {

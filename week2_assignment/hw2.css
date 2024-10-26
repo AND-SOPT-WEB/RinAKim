@@ -7,6 +7,8 @@ body {
 }
 
 .header {
+    width: 100%;
+    position: fixed;
     font-family: arial;
     font-size: 24px;
     top: 0;
@@ -14,25 +16,44 @@ body {
     background-color: #3f51b5;
 }
 
-.header img {
+h3 {
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 30px;
+    right: 30px;
+    color: white;
 }
 
+
+.icon {
+    position: fixed;
+    top: 15px;
+    left: 30px;
+
+}
+
+i {
+    color: white;
+}
+
+
 h1 {
+    font: 1.5rem sans-serif;
+    color: rgba(255, 255, 255, 0.852);
     display: flex;
     justify-content: center;
     line-height: 80px;
 }
 
 .filter-container {
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-gap: 10px;
     padding: 20px;
     max-width: 900px;
-    margin: auto;
+    /* margin: auto; */
     background-color: #f5f5f5;
     border-radius: 10px;
 }
@@ -40,7 +61,6 @@ h1 {
 
 .filter-container .form-group {
     display: contents;
-    /* 내부 label과 input이 각각 grid-item처럼 동작하도록 */
 }
 
 .form-group label {
@@ -80,9 +100,8 @@ h1 {
 
 .filter-container .buttons {
     grid-column: span 2;
-    /* 버튼은 두 열을 합쳐서 차지 */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .buttons button {
@@ -104,39 +123,27 @@ h1 {
     border: transparent;
 }
 
+
+.listMakers{
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+}
+
 .ControlButton {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     margin-bottom: 10px;
 }
 
 .ControlButton > button {
-    background-color: white;
+    background-color: whitesmoke;
     border: transparent;
     height: 30px;
     width: 100px;
     border-radius: 5px;
     margin-right: 10px;
 }
-
-
-/*     
-.buttons {
-    display: flex;
-    justify-content: space-evenly;
-
-
-}
-
-.buttons button {
-    width: 48%;
-    height: 45px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-} */
-
 
 
 .listbox {
@@ -146,6 +153,7 @@ h1 {
 }
 
 table {
+    margin-bottom: 30px;
     border-collapse: collapse;
     border-collapse: separate;
     border-spacing: 4px 4px;
@@ -200,10 +208,8 @@ th {
 td {
     height: 70px;
     background-color: rgb(255, 255, 255);
-    /* border-radius: 2px; */
 }
 
-/* 모달 스타일 */
 .modal {
     display: none;
     /* 기본적으로 모달은 숨김 */
@@ -244,7 +250,23 @@ td {
 }
 
 .modal-content label {
+    margin-top: 20px;
     margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.modal button {
+    background: #d1d6f0b8;
+    border: none;
+    margin-top: 10px;
+    height: 40px;
+}
+
+.modal button:hover {
+    background: rgb(211, 210, 210);
+}
+
+.modal span{
     font-weight: bold;
 }
 
