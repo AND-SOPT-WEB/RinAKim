@@ -26,85 +26,101 @@ h1 {
     line-height: 80px;
 }
 
-.container {
-    height: 500px;
-    width: 880px;
-    background-color: rgba(255, 255, 255, 0.833);
-    justify-content: center;
+.filter-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-gap: 10px;
+    padding: 20px;
+    max-width: 900px;
     margin: auto;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
 }
 
 
-.ControlButton {
-    margin-bottom: 20px;
-    right: 130px;
-    width: fit-content;
+.filter-container .form-group {
+    display: contents;
+    /* 내부 label과 input이 각각 grid-item처럼 동작하도록 */
 }
 
-.ControlButton > button {
-    height: 30px;
-    width: 100px;
-    margin: 5px;
-    border-color: transparent;
-    background-color: #aaabb0;
-    border-radius: 9px;
+.form-group label {
+    margin: auto;
+    grid-column: 1;
+    text-align: center;
+    font-weight: bold;
 }
 
-
-label {
-    padding: 13px;
-    width: 100px;
-    background-color: #ccc;
-}
-
-.form-group {
-    margin-left: 10px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-}
-
-
-.form-group>input {
-    width: 700px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    height: 40px;
+.filter-container input {
+    grid-column: 2;
+    width: 100%;
+    padding: 10px;
     border: 1px solid #ccc;
-    /* border-radius: 5px; */
-
+    border-radius: 5px;
 }
 
 .form-group2 {
-
-    align-items: baseline;
-    display: flex;
-    justify-content: flex-start;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column: span 3;
+    grid-gap: 30px;
+    align-items: center;
 }
 
-.form-group2>input {
-    width: 160px;
+.form-group2 label {
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-group2 select {
+    width: 100%;
     height: 40px;
     border: 1px solid #ccc;
-    /* border-radius: 5px; */
+    border-radius: 5px;
 }
 
-.form-group2>select {
-    width: 135px;
-    height: 43px;
-    border: 1px solid #ccc;
-    /* border-radius: 5px; */
+.filter-container .buttons {
+    grid-column: span 2;
+    /* 버튼은 두 열을 합쳐서 차지 */
+    display: flex;
+    justify-content: space-between;
 }
 
-.form-group2>label {
-    margin-left: 10px;
+.buttons button {
+    width: 48%;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+.reset-btn {
+    background-color: #e0e0e0;
+    border: transparent;
+}
+
+.search-btn {
+    background-color: #3f51b5;
+    color: white;
+    border: transparent;
+}
+
+.ControlButton {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.ControlButton > button {
+    background-color: white;
+    border: transparent;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+
+/*     
 .buttons {
     display: flex;
     justify-content: space-evenly;
@@ -119,16 +135,9 @@ label {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
+} */
 
-.reset-btn {
-    background-color: #e0e0e0;
-}
 
-.search-btn {
-    background-color: #3f51b5;
-    color: white;
-}
 
 .listbox {
     display: flex;
@@ -174,7 +183,8 @@ th:nth-child(8) {
     width: 200px;
 }
 
-th,td {
+th,
+td {
     text-align: center;
     vertical-align: top;
     vertical-align: bottom;
@@ -195,15 +205,18 @@ td {
 
 /* 모달 스타일 */
 .modal {
-    display: none; /* 기본적으로 모달은 숨김 */
+    display: none;
+    /* 기본적으로 모달은 숨김 */
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* 배경 반투명 */
-    overflow-y: auto; /* 모달이 화면을 넘어가면 스크롤을 허용 */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 배경 반투명 */
+    overflow-y: auto;
+    /* 모달이 화면을 넘어가면 스크롤을 허용 */
 }
 
 .modal-content {
@@ -211,18 +224,23 @@ td {
     margin: 5% auto;
     padding: 20px;
     width: 50%;
-    max-width: 600px; /* 모달의 최대 너비 */
+    max-width: 600px;
+    /* 모달의 최대 너비 */
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    max-height: 90vh; /* 화면 높이의 90%로 제한 */
-    overflow-y: auto; /* 모달 내부에서 내용이 넘치면 스크롤 */
+    max-height: 90vh;
+    /* 화면 높이의 90%로 제한 */
+    overflow-y: auto;
+    /* 모달 내부에서 내용이 넘치면 스크롤 */
 }
 
 /* 입력 필드 레이아웃 개선 */
 .modal-content form {
     display: flex;
-    flex-direction: column; /* 입력 필드를 세로로 배치 */
-    gap: 10px; /* 각 필드 사이의 간격 */
+    flex-direction: column;
+    /* 입력 필드를 세로로 배치 */
+    gap: 10px;
+    /* 각 필드 사이의 간격 */
 }
 
 .modal-content label {
@@ -236,8 +254,10 @@ td {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%; /* 입력 필드의 너비를 100%로 설정 */
-    box-sizing: border-box; /* 패딩과 보더를 포함한 너비 계산 */
+    width: 100%;
+    /* 입력 필드의 너비를 100%로 설정 */
+    box-sizing: border-box;
+    /* 패딩과 보더를 포함한 너비 계산 */
 }
 
 .close {
@@ -252,4 +272,3 @@ td {
     color: darkred;
     cursor: pointer;
 }
-

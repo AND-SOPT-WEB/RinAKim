@@ -403,6 +403,13 @@ function closeModal() {
   document.getElementById("memberModal").style.display = "none";
 }
 
+window.onclick = function (event) {
+  const modal = document.getElementById("memberModal");
+  if (event.target === modal) {
+      closeModal();
+  }
+};
+
 // 새 멤버 추가
 function addNewMember(event) {
   event.preventDefault(); // 폼 제출 방지
