@@ -325,14 +325,13 @@ function loadMembers() {
 
 // 검색 결과를 보여주는 함수
 function showFilteredTable(event) {
-  // 폼 제출 방지
+
   event.preventDefault();
 
   const members = JSON.parse(localStorage.getItem("membersData")) || [];
 
   console.log("검색 버튼이 눌렸습니다.");
 
-  // 검색 필드 값들을 가져옴
   const nameInput = document.getElementById("name").value.toLowerCase();
   const englishNameInput = document.getElementById("englishName").value.toLowerCase();
   const githubInput = document.getElementById("github").value.toLowerCase();
@@ -341,7 +340,7 @@ function showFilteredTable(event) {
   const firstGroupInput = document.getElementById("firstGrade").value;
   const secondGroupInput = document.getElementById("secondGrade").value;
   
-  // 필터링된 결과를 저장할 배열
+ 
   let filteredMembers = members.filter(member => {
       const matchesName = nameInput === "" || member.name.toLowerCase().includes(nameInput);
       const matchesEnglishName = englishNameInput === "" || member.englishName.toLowerCase().includes(englishNameInput);
@@ -351,11 +350,11 @@ function showFilteredTable(event) {
       const matchesFirstGroup = firstGroupInput === "" || member.firstWeekGroup == firstGroupInput;
       const matchesSecondGroup = secondGroupInput === "" || member.secondWeekGroup == secondGroupInput;
 
-      // 입력된 필드만 필터링에 사용
+      
       return matchesName && matchesEnglishName && matchesGithub && matchesGender && matchesRole && matchesFirstGroup && matchesSecondGroup;
   });
   let outputHTML = "";
-  // 결과를 출력하는 HTML 생성
+  
   filteredMembers.forEach((member,index) => {
       outputHTML += `<tr>
                       <td><input type="checkbox" data-index="${index}"></td>
@@ -369,27 +368,27 @@ function showFilteredTable(event) {
                     </tr>`;
   });
 
-  // 결과를 출력
+ 
   document.querySelector("tbody").innerHTML = outputHTML;
 }
 
 function reset(event) {
-  // 폼 제출 방지
+  
   event.preventDefault();
 
   // 입력 필드 초기화
   document.getElementById("name").value = "";
   document.getElementById("englishName").value = "";
   document.getElementById("github").value = "";
-  document.getElementById("gender").value = "";  // 기본값으로 설정
-  document.getElementById("role").value = "";    // 기본값으로 설정
+  document.getElementById("gender").value = "";  
+  document.getElementById("role").value = "";   
   document.getElementById("firstGrade").value = "";
   document.getElementById("secondGrade").value = "";
 
-  // 콘솔 로그로 초기화 확인
+  
   console.log("초기화 완료");
 
-  // 필터된 테이블 출력 함수 호출
+  
   showFilteredTable(event);
 }
 
@@ -412,9 +411,9 @@ window.onclick = function (event) {
 
 // 새 멤버 추가
 function addNewMember(event) {
-  event.preventDefault(); // 폼 제출 방지
+  event.preventDefault(); 
 
-  // 입력된 값 가져오기
+ 
   const name = document.getElementById("newName").value;
   const englishName = document.getElementById("newEnglishName").value;
   const github = document.getElementById("newGithub").value;
@@ -425,10 +424,10 @@ function addNewMember(event) {
 
   if (!name || !englishName || !github || !gender || !role || !firstGroup || !secondGroup) {
     alert("모든 필드를 채워주세요.");
-    return; // Stop the function if any field is empty
+    return; 
   }
 
-  // 새 멤버 객체 생성
+
   const newMember = {
       name: name,
       englishName: englishName,
@@ -451,33 +450,33 @@ function addNewMember(event) {
   // 모달 닫기
   closeModal();
 
-  // 멤버 리스트 업데이트 (loadMembers 함수 사용)
+  
   loadMembers();
 }
 
 // 전체 선택 체크박스 이벤트 처리
 function toggleCheckboxes(selectAllCheckbox) {
-  // 모든 체크박스 요소 선택
+  
   const checkboxes = document.querySelectorAll('#memberTableBody input[type="checkbox"]');
 
-  // 헤더 체크박스의 상태에 따라 모든 체크박스의 상태를 변경
+  
   checkboxes.forEach(checkbox => {
       checkbox.checked = selectAllCheckbox.checked;
   });
 }
 
-// 선택된 항목 삭제
+
 function deleteSelectedMembers() {
     const members = JSON.parse(localStorage.getItem("membersData")) || [];
     const checkboxes = document.querySelectorAll('#memberTableBody input[type="checkbox"]:checked');
 
-    // 체크된 항목의 인덱스를 찾아 해당 멤버 삭제
+    
     checkboxes.forEach(checkbox => {
         const index = checkbox.getAttribute("data-index");
-        members.splice(index, 1); // 인덱스에 해당하는 멤버 삭제
+        members.splice(index, 1); 
     });
 
-    // 로컬 스토리지 업데이트
+   
     localStorage.setItem("membersData", JSON.stringify(members));
-    loadMembers(); // 업데이트된 리스트 다시 로드
+    loadMembers(); 
 }
