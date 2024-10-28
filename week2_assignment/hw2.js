@@ -467,16 +467,15 @@ function toggleCheckboxes(selectAllCheckbox) {
 
 
 function deleteSelectedMembers() {
-    const members = JSON.parse(localStorage.getItem("membersData")) || [];
-    const checkboxes = document.querySelectorAll('#memberTableBody input[type="checkbox"]:checked');
+  
+  const members = JSON.parse(localStorage.getItem("membersData")) || [];
+  const checkboxes = document.querySelectorAll('#memberTableBody input[type="checkbox"]:checked');
+  const selectedIndices = Array.from(checkboxes).map(checkbox => parseInt(checkbox.getAttribute("data-index"))).sort((a, b) => b - a);
+  
+  selectedIndices.forEach(index => {
+      members.splice(index, 1);
+  });
 
-    
-    checkboxes.forEach(checkbox => {
-        const index = checkbox.getAttribute("data-index");
-        members.splice(index, 1); 
-    });
-
-   
-    localStorage.setItem("membersData", JSON.stringify(members));
-    loadMembers(); 
+  localStorage.setItem("membersData", JSON.stringify(members));
+  loadMembers(); 
 }
