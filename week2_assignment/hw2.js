@@ -328,8 +328,6 @@ function showFilteredTable(event) {
 
   const members = JSON.parse(localStorage.getItem("membersData")) || [];
 
-  console.log("검색 버튼이 눌렸습니다.");
-
   const nameInput = document.getElementById("name").value.toLowerCase();
   const englishNameInput = document.getElementById("englishName").value.toLowerCase();
   const githubInput = document.getElementById("github").value.toLowerCase();
@@ -382,9 +380,6 @@ function reset(event) {
   document.getElementById("role").value = "";   
   document.getElementById("firstGrade").value = "";
   document.getElementById("secondGrade").value = "";
-
-  
-  console.log("초기화 완료");
 
   
   showFilteredTable(event);
@@ -467,13 +462,16 @@ function toggleCheckboxes(selectAllCheckbox) {
 function deleteSelectedMembers() {
   
   const members = JSON.parse(localStorage.getItem("membersData")) || [];
+
+  // '#memberTableBody' 내부에서 체크된(선택된) 모든 체크박스를 선택하여 checkboxes 변수에 저장
   const checkboxes = document.querySelectorAll('#memberTableBody input[type="checkbox"]:checked');
   const selectedIndices = Array.from(checkboxes).map(checkbox => parseInt(checkbox.getAttribute("data-index"))).sort((a, b) => b - a);
   
   selectedIndices.forEach(index => {
       members.splice(index, 1);
   });
-
+  // 삭제 후 업데이트된 members 저장
   localStorage.setItem("membersData", JSON.stringify(members));
+  // 업데이트 된 데이터 렌더링
   loadMembers(); 
 }
