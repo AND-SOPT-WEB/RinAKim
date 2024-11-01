@@ -38,7 +38,7 @@ i {
 
 h1 {
     font: 1.5rem sans-serif;
-    color: rgba(255, 255, 255, 0.852);
+    color: white;
     display: flex;
     justify-content: center;
     line-height: 80px;
@@ -53,7 +53,6 @@ h1 {
     grid-gap: 10px;
     padding: 20px;
     max-width: 900px;
-    /* margin: auto; */
     background-color: #f5f5f5;
     border-radius: 10px;
 }
@@ -206,12 +205,11 @@ th {
 
 td {
     height: 70px;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
 }
 
 .modal {
     display: none;
-    /* 기본적으로 모달을 숨김*/
     position: fixed;
     z-index: 1;
     left: 0;
