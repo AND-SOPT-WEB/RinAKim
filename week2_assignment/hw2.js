@@ -303,8 +303,6 @@ if (!localStorage.getItem("membersData")) {
 function loadMembers() {
   const members = JSON.parse(localStorage.getItem("membersData")) || [];
 
-  console.log("loadMembers")
-
   let outputHTML = "";
 
   members.forEach((member,index) => {
