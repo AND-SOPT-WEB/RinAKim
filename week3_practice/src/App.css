@@ -1,0 +1,31 @@
+/* src/App.css */
+
+.app {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.tab-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.tab-container button {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.tab-container .active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.next-number {
+  font-weight: bold;
+  padding: 30px;
+}

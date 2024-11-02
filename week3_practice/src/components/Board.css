@@ -1,0 +1,10 @@
+/* src/components/Board.css */
+
+.board {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    justify-content: center;
+  }
+  
