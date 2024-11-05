@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .tabs button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+  }
+  
+  .tabs .active {
+    background-color: white;
+    color: #4caf50;
+    border-radius: 5px;
+  }
+  
+  .header-right {
+    display: flex;
+    gap: 10px;
+  }
+  

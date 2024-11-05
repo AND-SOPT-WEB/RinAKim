@@ -1,0 +1,52 @@
+.ranking-board {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .ranking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .reset-button {
+    padding: 5px 10px;
+    font-size: 0.9em;
+    color: #4caf50;
+    background-color: #fff;
+    border: 1px solid #4caf50;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  
+  .reset-button:hover {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .ranking-board table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .ranking-board th,
+  .ranking-board td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .ranking-board th {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .ranking-board td {
+    color: #555;
+  }
+  
