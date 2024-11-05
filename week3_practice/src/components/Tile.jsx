@@ -1,5 +1,3 @@
-// src/components/Tile.jsx
-
 import React from 'react';
 import './Tile.css';
 

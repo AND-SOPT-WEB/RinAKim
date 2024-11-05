@@ -1,5 +1,3 @@
-// src/components/Board.jsx
-
 import React, { useState, useEffect } from 'react';
 import Tile from './Tile';
 import './Board.css';

@@ -23,14 +23,14 @@ const App = () => {
       clearInterval(timerRef.current); // 타이머 정지
     }
 
-    // 컴포넌트 언마운트 시 타이머 정리
+    
     return () => clearInterval(timerRef.current);
   }, [isGameStarted]);
 
   const startGame = () => {
     setTime(0); // 타이머 초기화
     setNextNumber(1);
-    setIsGameStarted(false); // 처음엔 false로 두고 첫 클릭에서 시작
+    setIsGameStarted(false); 
     setIsGameCompleted(false);
   };
 
@@ -41,7 +41,7 @@ const App = () => {
   };
 
   const completeGame = () => {
-    setIsGameStarted(false); // 타이머 멈추기
+    setIsGameStarted(false);
     setIsGameCompleted(true);
 
     // 게임 완료 시 로컬 스토리지에 기록 저장
