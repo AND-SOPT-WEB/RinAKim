@@ -18,16 +18,6 @@ export default function Login() {
         setPassword(event.target.value);
     };
 
-    // 버튼 클릭 시 빈 페이지로 이동하는 함수
-    const goToEmptypage = () => {
-        if (username.trim() && password.trim()) {
-            // 아이디와 비밀번호가 비어있지 않은 경우에만 이동
-            navigate("/emptypage"); // "/emptypage"는 빈 페이지 경로입니다.
-        } else {
-            alert("아이디와 비밀번호를 모두 입력해주세요.");
-        }
-    };
-
     const goToHeader = () => {
         navigate("/");
     };
@@ -57,18 +47,8 @@ export default function Login() {
         <main className="Login">
             <h2>로그인</h2>
             <div className="InputLogin">
-                <input
-                    type="text"
-                    value={username}
-                    onChange={handleUsernameChange}
-                    placeholder="아이디 입력"
-                />
-                <input
-                    type="password"
-                    value={password}
-                    onChange={handlePasswordChange}
-                    placeholder="비밀번호 입력"
-                />
+                <input type="text" value={username} onChange={handleUsernameChange}/>
+                <input type="password" value={password} onChange={handlePasswordChange}/>
                 <button type="button" onClick={handleLoginClick}>로그인</button>
             </div>
             <span className="goToHeader" onClick={goToHeader}>회원가입</span>
