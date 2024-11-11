@@ -1,0 +1,44 @@
+
+.showHobby {
+    width: 30rem;
+    height: 30rem;
+    background-color: rgba(255, 255, 255, 0.796);
+    border-radius: 2rem;
+}
+.showHobby > h2 {
+    padding: 1rem;
+}
+
+.myHobby {
+    text-align: left;
+    margin-left: 2rem;
+}
+
+.othersHobby{
+    display: flex;
+    justify-content: center;
+}
+
+.othersHobby > input {
+    border: none;
+    width: 20rem;
+    height: 2.5rem;
+    margin-right: 1rem;
+}
+
+
+.othersHobby > button{
+    height: 2.5rem;
+    background-color: #76b1e1a5;
+
+}
+.showOthersHobby {
+    font-size: small;
+    text-align: left;
+    margin-left: 2.5rem;
+    margin-top: 0;
+    
+}
+.showOthersHobby > p {
+    margin-top: 0;
+}

@@ -1,0 +1,42 @@
+.SignUp {
+    background-color: white;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    height: 35rem;
+    width: 30rem;
+}
+
+.SignUp > p {
+    display: flex;
+    margin-left: 1rem;
+
+}
+
+.input {
+    margin: auto;
+    width: 25rem;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    color: white;
+    height: 3rem;
+    background-color:rgba(193, 230, 255, 0.878);
+    cursor: pointer;
+}
+
+button:hover{
+   background-color: rgb(222, 225, 225);
+}
+
+.CheckMember > span {
+    color: blue;
+    cursor: pointer;
+}
+
+.CheckMember {
+    font-size: small;
+}

@@ -1,0 +1,24 @@
+.editInfo {
+    background-color: white;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    height: 35rem;
+    width: 30rem;
+    margin: auto;
+}
+
+.newPassword, .newHobby {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.newPassword input, .newHobby input {
+    width: 25rem;
+}
+.newHobby button {
+    width: 25.5rem;
+}
