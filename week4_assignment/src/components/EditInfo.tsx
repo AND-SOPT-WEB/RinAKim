@@ -33,7 +33,6 @@ export default function EditInfo() {
           },
         });
 
-        // 서버 응답으로부터 취미와 비밀번호를 상태에 설정
         setHobby(response.data.result.hobby);
         setPassword(response.data.result.password);
       } catch (error) {
@@ -58,7 +57,7 @@ export default function EditInfo() {
         { hobby, password }, // 수정할 정보 전송
         {
           headers: {
-            token: token, // token 헤더 설정
+            token: token, 
           },
         }
       );

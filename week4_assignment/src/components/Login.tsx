@@ -25,19 +25,17 @@ export default function Login() {
     async function handleLoginClick() {
         try {
             const response = await axios.post("http://211.188.53.75:8080/login", {
-                username, // 화면에 입력된 username
-                password, // 화면에 입력된 password
+                username, 
+                password, 
             });
 
             const token = response.data.result?.token || response.data.token;
             console.log(`로그인 성공! ${token}`);
-            // 로그인 성공 시 토큰을 저장하는 코드 예시
             localStorage.setItem("token", response.data.result.token);
 
-            // 로그인 성공 시 빈 페이지로 이동
+            // 로그인 성공 취미 페이지로 이동
             navigate("/myhobby");
         } catch (error) {
-            // 서버에서 반환된 오류 처리 (예: 잘못된 아이디/비밀번호)
             console.error("로그인 요청에 실패했습니다.", error);
             alert("아이디/비밀번호가 올바르지 않습니다.");
         }

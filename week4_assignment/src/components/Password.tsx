@@ -11,7 +11,7 @@ export default function Password() {
   function JoinPassword(event: React.ChangeEvent<HTMLInputElement>) {
     const inputValue = event.target.value;
     setPassword(inputValue);
-    localStorage.setItem("password", inputValue); // 로컬 스토리지에 password 저장
+    localStorage.setItem("password", inputValue); 
   }
 
   function handleConfirmPassword(event: React.ChangeEvent<HTMLInputElement>) {
@@ -23,12 +23,12 @@ export default function Password() {
       alert("비밀번호가 일치하지 않습니다.");
     } else {
       setError("");
-      navigate("/hobby"); // 취미 입력 페이지로 이동
+      navigate("/hobby"); 
     }
   }
 
   function goToLogin() {
-    navigate("/login");  // "/password" 경로로 이동
+    navigate("/login");  
   }
 
   return (

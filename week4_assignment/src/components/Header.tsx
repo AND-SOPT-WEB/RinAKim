@@ -15,11 +15,11 @@ export default function Header() {
     }  
 
     function goToPasswordPage() {
-        navigate("/password");  // "/password" 경로로 이동
+        navigate("/password");  
     }
 
     function goToLogin() {
-        navigate("/login");  // "/password" 경로로 이동
+        navigate("/login");  
     }
 
       return (

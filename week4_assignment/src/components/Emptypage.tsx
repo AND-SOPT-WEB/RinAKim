@@ -2,7 +2,7 @@ import "./Emptypage.css";
 import { useNavigate } from "react-router-dom";
 
 export default function Emptypage() {
-  const navigate = useNavigate(); // useNavigate 훅을 통해 navigate 함수 가져오기
+  const navigate = useNavigate(); 
 
   function goToMyhobby() {
     navigate("/myhobby"); 
