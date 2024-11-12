@@ -45,8 +45,8 @@ export default function Login() {
         <main className="Login">
             <h2>로그인</h2>
             <div className="InputLogin">
-                <input type="text" value={username} onChange={handleUsernameChange}/>
-                <input type="password" value={password} onChange={handlePasswordChange}/>
+                <input type="text" value={username} onChange={handleUsernameChange} placeholder="회원번호를 입력하세요"/>
+                <input type="password" value={password} onChange={handlePasswordChange} placeholder="비밀번호를 입력하세요"/>
                 <button type="button" onClick={handleLoginClick}>로그인</button>
             </div>
             <span className="goToHeader" onClick={goToHeader}>회원가입</span>
