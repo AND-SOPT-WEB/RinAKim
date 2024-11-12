@@ -36,7 +36,6 @@ export default function EditInfo() {
         setHobby(response.data.result.hobby);
         setPassword(response.data.result.password);
       } catch (error) {
-        setError("정보를 불러오는 데 실패했습니다.");
       }
     };
 
