@@ -19,6 +19,7 @@ header {
    position: fixed;
    right: 0;
    margin-right: 2rem;
+   cursor: pointer;
 }
 .myhobby {
     cursor: pointer;
